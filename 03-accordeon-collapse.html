@@ -5,8 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec x-collapse</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
+    <div class="accordeon"x-data="{
+      estOuvert: 1
+      }">
+      <section>
+        <button @click="estOuvert = 1">Bouton 1</button>
+          <p x-show="estOuvert === 1" x-collapse>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam reiciendis debitis perferendis corporis vitae odio nisi, itaque sit unde nulla rerum enim minus laudantium suscipit sequi eligendi temporibus. Magnam, odio.</p>
+      </section>
+      <section>
+      <button @click="estOuvert= 2">bouton 2</button>
+      <p x-show="estOuvert===2"x-collapse>Provident exercitationem, quae labore doloribus voluptatibus molestiae sint est eius numquam officia ad aliquam consectetur dolores cumque eveniet asperiores aliquid, assumenda necessitatibus! Delectus dolore earum cumque, nesciunt eaque totam quia.</p>
+    </section>
+    <section>
+      <button @click="estOuvert= 3">bouton 3</button>
+      <p x-show="estOuvert===3"x-collapse>Optio, labore excepturi? Error, perferendis dignissimos. Unde debitis quo sunt vitae quae alias, odio, autem accusamus cum soluta beatae ipsum eos excepturi distinctio deserunt, dignissimos quibusdam laudantium perferendis! Beatae, delectus.</p>
+    </section>
+      </div>
   </body>
 </html>
