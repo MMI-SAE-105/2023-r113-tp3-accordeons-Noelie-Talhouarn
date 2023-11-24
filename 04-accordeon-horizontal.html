@@ -8,68 +8,45 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
       #accordeon {
-        display: flex;
-        margin: 0;
-        padding: 0;
-     /* pour que les éléments soient alignés horizontalement */
-     /* pour éviter les marges par défaut */
-     /* pour éviter les "padding" par défaut */
+        display: flex; /* pour que les éléments soient alignés horizontalement */
+        margin: 0;/* pour éviter les marges par défaut */
+        padding: 0;/* pour éviter les "padding" par défaut */
       }
       #accordeon li {
-        width: 107px;
-        overflow: hidden;
-        transition: width 0.5s;
-        background-color: #eee;
-        list-style: none;
-        margin: 3px;
-        padding: 5px;
-        border-radius: 5px;
-
-     /* largeur de chaque élément replié 107px */
-     /* pour cacher le contenu dépassant de l'élément */
-     /* pour l'animation, transition sur width */
-     /* couleur de fond #eee */
-     /* pour enlever les puces */
-     /* pour espacer les éléments, marge de 3px */
-     /* pour espacer le contenu, padding de 5px */
-     /* pour arrondir les bords de 5px */
+        width: 107px;/* largeur de chaque élément replié 107px */
+        overflow: hidden;/* pour cacher le contenu dépassant de l'élément */
+        transition: width 0.5s;/* pour l'animation, transition sur width */
+        background-color: #eee;/* couleur de fond #eee */
+        list-style: none; /* pour enlever les puces */
+        margin: 3px;/* pour espacer les éléments, marge de 3px */
+        padding: 5px; /*pour espacer le contenu, padding de 5px */
+        border-radius: 5px;/* pour arrondir les bords de 5px */
      }
      #accordeon li.actif {
-      width: 317px;
-     /* largeur de l'élément déplié 317px */
+      width: 317px;/* largeur de l'élément déplié 317px */
      }
-     #accordeon li figure {
-      margin: 0;
-      display: flex;
-      width: 317px;
-     /* pour éviter les marges par défaut */
-     /* pour que les éléments soient alignés horizontalement */
-     /* largeur de l'élément intrérieur de 317px (= déplié) */
+    #accordeon li figure {
+      margin: 0; /* pour éviter les marges par défaut */
+      display: flex;/* pour que les éléments soient alignés horizontalement */
+      width: 317px;/* largeur de l'élément intrérieur de 317px (= déplié) */
      }
      #accordeon li figure figcaption {
-      width: 200px;
-      padding: 10px;
-      display: flex;
+      width: 200px;/* largeur du texte de 200px */
+      padding: 10px;/* pour espacer le texte, padding de 10px */
+      display: flex;/* pour que les éléments soient alignés verticalement */
 
-      padding: 12px;
+      padding: 12px;/* espace entre les éléments */
      }
+     
      #figcation > * {
       margin: 0; /* pour eviter les marges par defaut */
       padding: 0; /* pour eviter les padding par defaut */
      }
-      
-     /* largeur du texte de 200px */
-     /* pour espacer le texte, padding de 10px */
-     /* pour que les éléments soient alignés verticalement */
+      /* Sur tous les enfants de figcation */
     
-     /* espace entre les éléments */
-     }
-     /* Sur tous les enfants de figcation */
      #accordeon li figure figcaption > * {
-      margin: 0;
-      padding: 0;
-     /* pour éviter les marges par défaut */
-     /* pour éviter les "padding" par défaut */
+      margin: 0;/* pour éviter les marges par défaut */
+      padding: 0;/* pour éviter les "padding" par défaut */
      }
 
     </style>
